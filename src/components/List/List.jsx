@@ -2,6 +2,7 @@ import React from "react";
 import "./List.scss";
 import Card from "../Card/Card";
 import useFetch from "../../hooks/useFetch";
+import LoadingSpinner from "../loadingSpinner/loadingSpinner";
 
 const List = ({ subCats, maxPrice, sort, catId }) => {
   const { data, loading, error } = useFetch(
@@ -13,7 +14,7 @@ const List = ({ subCats, maxPrice, sort, catId }) => {
   return (
     <div className="list">
       {loading
-        ? "loading"
+        ? <LoadingSpinner/>
         : data?.map((item) => <Card item={item} key={item.id} />)}
     </div>
   );

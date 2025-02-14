@@ -20,6 +20,7 @@ const Cart = () => {
   const handlePayment = async () => {
     try {
       const stripe = await stripePromise;
+      console.log(stripe)
       const res = await makeRequest.post("/orders", {
         products,
       });

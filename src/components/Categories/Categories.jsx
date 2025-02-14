@@ -2,7 +2,7 @@ import React from "react";
 import "./Categories.scss";
 import { Link } from "react-router-dom";
 
-const Categories = () => {
+const Categories = () => {  
   return (
     <div className="categories">
       <div className="col">

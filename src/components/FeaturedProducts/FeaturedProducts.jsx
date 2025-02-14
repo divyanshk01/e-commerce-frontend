@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 import useFetch from "../../hooks/useFetch";
+import LoadingSpinner from "../loadingSpinner/loadingSpinner";
 
 const FeaturedProducts = ({ type }) => {
   const { data, loading, error } = useFetch(
@@ -22,9 +23,9 @@ const FeaturedProducts = ({ type }) => {
       </div>
       <div className="bottom">
         {error
-          ? "something went wrong!"
+          ? "Something went wrong!"
           : loading
-          ? "loading"
+          ? <LoadingSpinner/>
           : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>

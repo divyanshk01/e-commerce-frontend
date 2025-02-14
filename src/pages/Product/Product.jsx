@@ -8,6 +8,7 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
+import LoadingSpinner from "../../components/loadingSpinner/loadingSpinner";
 
 const Product = () => {
   const id = useParams().id;
@@ -16,11 +17,12 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
+  console.log(data)
 
   return (
     <div className="product">
       {loading ? (
-        "loading"
+        <LoadingSpinner/>
       ) : (
         <>
           <div className="left">
@@ -55,7 +57,7 @@ const Product = () => {
           <div className="right">
             <h1>{data?.attributes?.title}</h1>
             <span className="price">₹{data?.attributes?.price}</span>
-            <p>{data?.attributes?.desc}</p>
+            {/* <p>{data?.attributes?.desc}</p> */}
             <div className="quantity">
               <button
                 onClick={() =>
@@ -99,6 +101,7 @@ const Product = () => {
             <hr />
             <div className="info">
               <span>DESCRIPTION</span>
+              {data?.attributes?.desc}
               <hr />
               <span>ADDITIONAL INFORMATION</span>
               <hr />

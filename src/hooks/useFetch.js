@@ -11,7 +11,6 @@ const useFetch = (url) => {
       try {
         setLoading(true);
         const res = await makeRequest.get(url);
-        console.log(res);
         setData(res.data.data);
       } catch (err) {
         setError(true);

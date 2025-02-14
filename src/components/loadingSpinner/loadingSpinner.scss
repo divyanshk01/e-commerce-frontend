@@ -1,0 +1,64 @@
+// // src/components/LoadingSpinner.scss
+// .loader {
+//     border: 4px solid transparent; /* Make the border thinner */
+//     border-top: 4px solid #2879fe; /* Blue color for the top */
+//     border-radius: 50%;
+//     width: 40px; /* Smaller size of the spinner */
+//     height: 40px; /* Smaller size of the spinner */
+//     animation: spin 1s linear infinite; /* Animation for spinning */
+//     margin: auto; /* Center the loader */
+//   }
+  
+//   @keyframes spin {
+//     0% { transform: rotate(0deg); }
+//     100% { transform: rotate(360deg); }
+//   }
+/* CSS for SVG Spinner */
+// .svg-spinner {
+//   animation: rotate 2s linear infinite;
+// }
+
+// .path {
+//   stroke: #3498db;
+//   stroke-linecap: round;
+//   animation: dash 1.5s ease-in-out infinite;
+// }
+
+// @keyframes rotate {
+//   100% { transform: rotate(360deg); }
+// }
+
+// @keyframes dash {
+//   0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+//   50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+//   100% { stroke-dasharray: 90, 150; stroke-dashoffset: -125; }
+// }
+
+/* CSS for the loading bar */
+// .loading-bar {
+//   width: 100px;
+//   height: 8px;
+//   background-color: #f3f3f3;
+//   border-radius: 4px;
+//   overflow: hidden;
+//   position: relative;
+// }
+
+// .loading-bar::after {
+//   content: '';
+//   display: block;
+//   width: 50%;  /* Starting size */
+//   height: 100%;
+//   background-color: #3498db;
+//   animation: loading 1s ease-in-out infinite;
+// }
+
+// @keyframes loading {
+//   0% { transform: translateX(-100%); }
+//   100% { transform: translateX(100%); }
+// }
+
+// CSS for spinner element
+.loading{
+  size: 18px;
+}
